@@ -14,9 +14,9 @@ public class ConfeccionesMaty {
 
         System.out.println("--- CLIENTES ---");
         ClienteDAO clienteDAO = new ClienteDAO();
-        clienteDAO.insertarCliente(new Cliente("C001", "Maria", "Lopez", "3001234567"));
+        clienteDAO.insertarCliente(new Cliente("C001", "Maria", "Lopez", "300123456"));
         clienteDAO.consultarClientes().forEach(System.out::println);
-        clienteDAO.actualizarCliente(new Cliente("C001", "Maria", "Garcia", "3009999999"));
+        clienteDAO.actualizarCliente(new Cliente("C001", "Maria", "Garcia", "300999999"));
         clienteDAO.consultarClientes().forEach(System.out::println);
         clienteDAO.eliminarCliente("C001");
 
@@ -30,14 +30,14 @@ public class ConfeccionesMaty {
 
         System.out.println("\n--- PROVEEDORES ---");
         ProveedorDAO proveedorDAO = new ProveedorDAO();
-        proveedorDAO.insertarProveedor(new Proveedor(1, "Textiles SA", "Calle 10", 101));
+        proveedorDAO.insertarProveedor(new Proveedor(1, "Textiles SA", "Calle 10", 1));
         proveedorDAO.consultarProveedores().forEach(System.out::println);
-        proveedorDAO.actualizarProveedor(new Proveedor(1, "Textiles Nueva", "Calle 15", 101));
+        proveedorDAO.actualizarProveedor(new Proveedor(1, "Textiles Nueva", "Calle 15", 1));
         proveedorDAO.consultarProveedores().forEach(System.out::println);
         proveedorDAO.eliminarProveedor(1);
 
         System.out.println("\n--- COMPRAS ---");
-        clienteDAO.insertarCliente(new Cliente("C002", "Juan", "Perez", "3112345678"));
+        clienteDAO.insertarCliente(new Cliente("C002", "Juan", "Perez", "311234567"));
         productoDAO.insertarProducto(new Producto(2, "Pantalon", 80000f));
         CompraDAO compraDAO = new CompraDAO();
         compraDAO.insertarCompra(new Compra("C002", 2));
